@@ -4,6 +4,8 @@
  */
 package presentacion;
 
+import java.awt.Color;
+
 /**
  *
  * @author User
@@ -16,6 +18,102 @@ public class Doctor extends javax.swing.JInternalFrame {
     public Doctor() {
         initComponents();
     }
+    
+    public void validarBusquedaDoc(){
+        if(txtbuscardoctor.getText().isEmpty()){
+            lblobligatorio.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio.setText("");
+        }
+        if(txtbuscardoctor.getText().isEmpty()){
+            btnbuscardoc.setEnabled(false);
+            btnregistrardoc.setEnabled(false);
+            btneditardoc.setEnabled(false);
+            btnactivardoc.setEnabled(false);
+            btndesactivardoc.setEnabled(false);
+        }else{
+            btnbuscardoc.setEnabled(true);
+            btnregistrardoc.setEnabled(true);
+            btneditardoc.setEnabled(true);
+            btnactivardoc.setEnabled(true);
+            btndesactivardoc.setEnabled(true);
+        }
+    }
+    public void validarNombreDoc(){
+        if(txtnombredoc.getText().isEmpty()){
+            lblobligatorio1.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio1.setText("");
+        }
+        if(txtnombredoc.getText().isEmpty()){
+            btnguardardoc.setEnabled(false);
+        }else{
+            btnguardardoc.setEnabled(true);
+        }
+    }
+    public void validarDNIDoc(){
+        if(txtdocumentodoc.getText().isEmpty()){
+            lblobligatorio2.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio2.setText("");
+        }
+        if(txtdocumentodoc.getText().isEmpty()){
+            btnguardardoc.setEnabled(false);
+        }else{
+            btnguardardoc.setEnabled(true);
+        }
+    }
+
+    public void validarTelefonoDoc(){
+        if(txttelefonodoc.getText().isEmpty()){
+            lblobligatorio3.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio3.setText("");
+        }
+        if(txttelefonodoc.getText().isEmpty()){
+            btnguardardoc.setEnabled(false);
+        }else{
+            btnguardardoc.setEnabled(true);
+        }
+    }
+    
+    public void validarFechaDoc(){
+        if(fechanacimientodoc.getDate()== null){
+            lblobligatorio4.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio4.setText("");
+        }
+        if(fechanacimientodoc.getDate()== null){
+            btnguardardoc.setEnabled(false);
+        }else{
+             btnguardardoc.setEnabled(true);
+        }
+    }
+    
+    public void validarEdadDoc(){
+        if(txtedaddoc.getText().isEmpty()){
+            lblobligatorio5.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio5.setText("");
+        }
+        if(txtedaddoc.getText().isEmpty()){
+            btnguardardoc.setEnabled(false);
+        }else{
+            btnguardardoc.setEnabled(true);
+        }
+    }
+    public void validarDireccionDoc(){
+        if(txtdirecciondoc.getText().isEmpty()){
+            lblobligatorio6.setText("(*) Campo obligatorio");
+        }else{
+            lblobligatorio6.setText("");
+        }
+        if(txtdirecciondoc.getText().isEmpty()){
+            btnguardardoc.setEnabled(false);
+        }else{
+            btnguardardoc.setEnabled(true);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,6 +124,44 @@ public class Doctor extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtbuscardoctor = new javax.swing.JTextField();
+        btnbuscardoc = new javax.swing.JButton();
+        btnregistrardoc = new javax.swing.JButton();
+        btneditardoc = new javax.swing.JButton();
+        lblobligatorio = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        btnactivardoc = new javax.swing.JButton();
+        btndesactivardoc = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        txtnombredoc = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtdocumentodoc = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txttelefonodoc = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtdirecciondoc = new javax.swing.JTextArea();
+        fechanacimientodoc = new com.toedter.calendar.JDateChooser();
+        txtedaddoc = new javax.swing.JTextField();
+        lblobligatorio2 = new javax.swing.JLabel();
+        lblobligatorio3 = new javax.swing.JLabel();
+        lblobligatorio1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lblobligatorio4 = new javax.swing.JLabel();
+        lblobligatorio6 = new javax.swing.JLabel();
+        lblobligatorio5 = new javax.swing.JLabel();
+        btnguardardoc = new javax.swing.JButton();
+        btncancelardoc = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
@@ -33,21 +169,594 @@ public class Doctor extends javax.swing.JInternalFrame {
         setTitle("Doctor");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/doctor.png"))); // NOI18N
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/veterinario.png"))); // NOI18N
+        jLabel1.setText(" Nombre del Doctor");
+
+        txtbuscardoctor.setForeground(new java.awt.Color(153, 153, 153));
+        txtbuscardoctor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtbuscardoctor.setText("Buscar...");
+        txtbuscardoctor.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtbuscardoctorFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtbuscardoctorFocusLost(evt);
+            }
+        });
+        txtbuscardoctor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtbuscardoctorKeyReleased(evt);
+            }
+        });
+
+        btnbuscardoc.setBackground(new java.awt.Color(153, 153, 255));
+        btnbuscardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnbuscardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/lupa.png"))); // NOI18N
+        btnbuscardoc.setText("Buscar Doctor");
+
+        btnregistrardoc.setBackground(new java.awt.Color(153, 153, 255));
+        btnregistrardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnregistrardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/registrarpersona.png"))); // NOI18N
+        btnregistrardoc.setText("Registrar Doctor");
+
+        btneditardoc.setBackground(new java.awt.Color(153, 153, 255));
+        btneditardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btneditardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/editar.png"))); // NOI18N
+        btneditardoc.setText("Editar Doctor");
+
+        lblobligatorio.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio.setForeground(new java.awt.Color(255, 51, 51));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        btnactivardoc.setBackground(new java.awt.Color(102, 255, 102));
+        btnactivardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnactivardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/check.png"))); // NOI18N
+        btnactivardoc.setText("Activar Doctor");
+
+        btndesactivardoc.setBackground(new java.awt.Color(255, 102, 102));
+        btndesactivardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btndesactivardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/x.png"))); // NOI18N
+        btndesactivardoc.setText("Desactivar Doctor");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("TOTAL DE REGISTROS");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblobligatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(txtbuscardoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnbuscardoc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnregistrardoc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btneditardoc))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 945, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnactivardoc)
+                                .addGap(18, 18, 18)
+                                .addComponent(btndesactivardoc)
+                                .addGap(116, 116, 116)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(11, 11, 11)))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtbuscardoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnbuscardoc)
+                    .addComponent(btnregistrardoc)
+                    .addComponent(btneditardoc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblobligatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnactivardoc)
+                            .addComponent(btndesactivardoc)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Listado de Doctores", jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/veterinario.png"))); // NOI18N
+        jLabel3.setText(" Nombre del Doctor *");
+
+        txtnombredoc.setForeground(new java.awt.Color(153, 153, 153));
+        txtnombredoc.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtnombredoc.setText("Ingrese nombre");
+        txtnombredoc.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtnombredocFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtnombredocFocusLost(evt);
+            }
+        });
+        txtnombredoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtnombredocKeyReleased(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/tipodocumento.png"))); // NOI18N
+        jLabel4.setText(" DNI *");
+
+        txtdocumentodoc.setForeground(new java.awt.Color(153, 153, 153));
+        txtdocumentodoc.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtdocumentodoc.setText("Ingrese documento");
+        txtdocumentodoc.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtdocumentodocFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtdocumentodocFocusLost(evt);
+            }
+        });
+        txtdocumentodoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtdocumentodocKeyReleased(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/telefono.png"))); // NOI18N
+        jLabel5.setText(" Telefono *");
+
+        txttelefonodoc.setForeground(new java.awt.Color(153, 153, 153));
+        txttelefonodoc.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txttelefonodoc.setText("Ingrese telefono");
+        txttelefonodoc.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txttelefonodocFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txttelefonodocFocusLost(evt);
+            }
+        });
+        txttelefonodoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txttelefonodocKeyReleased(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/direccion.png"))); // NOI18N
+        jLabel6.setText(" Dirección *");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/fecha.png"))); // NOI18N
+        jLabel7.setText(" Fecha de Nacimiento *");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/edad.png"))); // NOI18N
+        jLabel8.setText(" Edad *");
+
+        txtdirecciondoc.setColumns(20);
+        txtdirecciondoc.setForeground(new java.awt.Color(153, 153, 153));
+        txtdirecciondoc.setRows(5);
+        txtdirecciondoc.setText("Ingrese Dirección");
+        txtdirecciondoc.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtdirecciondocFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtdirecciondocFocusLost(evt);
+            }
+        });
+        txtdirecciondoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtdirecciondocKeyReleased(evt);
+            }
+        });
+        jScrollPane2.setViewportView(txtdirecciondoc);
+
+        fechanacimientodoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                fechanacimientodocKeyReleased(evt);
+            }
+        });
+
+        txtedaddoc.setForeground(new java.awt.Color(153, 153, 153));
+        txtedaddoc.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtedaddoc.setText("Ingrese Edad");
+        txtedaddoc.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtedaddocFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtedaddocFocusLost(evt);
+            }
+        });
+        txtedaddoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtedaddocActionPerformed(evt);
+            }
+        });
+        txtedaddoc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtedaddocKeyReleased(evt);
+            }
+        });
+
+        lblobligatorio2.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio2.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblobligatorio3.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio3.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblobligatorio1.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio1.setForeground(new java.awt.Color(255, 51, 51));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/veterinario1.png"))); // NOI18N
+
+        lblobligatorio4.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio4.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblobligatorio6.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio6.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblobligatorio5.setBackground(new java.awt.Color(255, 255, 255));
+        lblobligatorio5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblobligatorio5.setForeground(new java.awt.Color(255, 51, 51));
+
+        btnguardardoc.setBackground(new java.awt.Color(153, 255, 255));
+        btnguardardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnguardardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/guardar.png"))); // NOI18N
+        btnguardardoc.setText(" Guardar");
+
+        btncancelardoc.setBackground(new java.awt.Color(153, 153, 255));
+        btncancelardoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncancelardoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/cancel_1.png"))); // NOI18N
+        btncancelardoc.setText("Cancelar");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        jLabel11.setText("Los campos obligatorios están marcados con un asterisco (*).");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblobligatorio3, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txttelefonodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(lblobligatorio2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGap(74, 74, 74)
+                            .addComponent(txtdocumentodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnombredoc)
+                            .addComponent(lblobligatorio1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblobligatorio4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fechanacimientodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtedaddoc, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblobligatorio5, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                            .addComponent(lblobligatorio6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(btnguardardoc)
+                        .addGap(18, 18, 18)
+                        .addComponent(btncancelardoc))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(24, 24, 24)))
+                .addGap(99, 99, 99))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(1, 1, 1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtnombredoc, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fechanacimientodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblobligatorio1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblobligatorio4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtdocumentodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtedaddoc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblobligatorio2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblobligatorio5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)))
+                    .addComponent(jLabel9))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(txttelefonodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblobligatorio3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnguardardoc, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btncancelardoc, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblobligatorio6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Formulario de Doctores", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1018, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtedaddocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtedaddocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtedaddocActionPerformed
+
+    private void txtbuscardoctorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtbuscardoctorKeyReleased
+        validarBusquedaDoc();
+    }//GEN-LAST:event_txtbuscardoctorKeyReleased
+
+    private void txtnombredocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombredocKeyReleased
+        validarNombreDoc();
+    }//GEN-LAST:event_txtnombredocKeyReleased
+
+    private void txtdocumentodocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdocumentodocKeyReleased
+        validarDNIDoc();
+    }//GEN-LAST:event_txtdocumentodocKeyReleased
+
+    private void txttelefonodocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txttelefonodocKeyReleased
+        validarTelefonoDoc();
+    }//GEN-LAST:event_txttelefonodocKeyReleased
+
+    private void fechanacimientodocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fechanacimientodocKeyReleased
+        validarFechaDoc();
+    }//GEN-LAST:event_fechanacimientodocKeyReleased
+
+    private void txtedaddocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtedaddocKeyReleased
+        validarEdadDoc();
+    }//GEN-LAST:event_txtedaddocKeyReleased
+
+    private void txtdirecciondocKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdirecciondocKeyReleased
+        validarDireccionDoc();
+    }//GEN-LAST:event_txtdirecciondocKeyReleased
+
+    private void txtbuscardoctorFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtbuscardoctorFocusGained
+        if (txtbuscardoctor.getText().equals("Buscar...")){
+            txtbuscardoctor.setText("");
+            txtbuscardoctor.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtbuscardoctorFocusGained
+
+    private void txtbuscardoctorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtbuscardoctorFocusLost
+        if (txtbuscardoctor.getText().equals("")){
+            txtbuscardoctor.setText("Buscar...");
+            txtbuscardoctor.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtbuscardoctorFocusLost
+
+    private void txtnombredocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtnombredocFocusGained
+        if (txtnombredoc.getText().equals("Ingrese nombre")){
+            txtnombredoc.setText("");
+            txtnombredoc.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtnombredocFocusGained
+
+    private void txtnombredocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtnombredocFocusLost
+        if (txtnombredoc.getText().equals("")){
+            txtnombredoc.setText("Ingrese nombre");
+            txtnombredoc.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtnombredocFocusLost
+
+    private void txtdocumentodocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtdocumentodocFocusGained
+        if (txtdocumentodoc.getText().equals("Ingrese documento")){
+            txtdocumentodoc.setText("");
+            txtdocumentodoc.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtdocumentodocFocusGained
+
+    private void txtdocumentodocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtdocumentodocFocusLost
+        if (txtdocumentodoc.getText().equals("")){
+            txtdocumentodoc.setText("Ingrese documento");
+            txtdocumentodoc.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtdocumentodocFocusLost
+
+    private void txttelefonodocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txttelefonodocFocusGained
+        if (txttelefonodoc.getText().equals("Ingrese telefono")){
+            txttelefonodoc.setText("");
+            txttelefonodoc.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txttelefonodocFocusGained
+
+    private void txttelefonodocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txttelefonodocFocusLost
+        if (txttelefonodoc.getText().equals("")){
+            txttelefonodoc.setText("Ingrese telefono");
+            txttelefonodoc.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txttelefonodocFocusLost
+
+    private void txtedaddocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtedaddocFocusGained
+        if (txtedaddoc.getText().equals("Ingrese Edad")){
+            txtedaddoc.setText("");
+            txtedaddoc.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtedaddocFocusGained
+
+    private void txtedaddocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtedaddocFocusLost
+        if (txtedaddoc.getText().equals("")){
+            txtedaddoc.setText("Ingrese Edad");
+            txtedaddoc.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtedaddocFocusLost
+
+    private void txtdirecciondocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtdirecciondocFocusGained
+        if (txtdirecciondoc.getText().equals("Ingrese Dirección")){
+            txtdirecciondoc.setText("");
+            txtdirecciondoc.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtdirecciondocFocusGained
+
+    private void txtdirecciondocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtdirecciondocFocusLost
+        if (txtdirecciondoc.getText().equals("")){
+            txtdirecciondoc.setText("Ingrese Dirección");
+            txtdirecciondoc.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtdirecciondocFocusLost
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnactivardoc;
+    private javax.swing.JButton btnbuscardoc;
+    private javax.swing.JButton btncancelardoc;
+    private javax.swing.JButton btndesactivardoc;
+    private javax.swing.JButton btneditardoc;
+    private javax.swing.JButton btnguardardoc;
+    private javax.swing.JButton btnregistrardoc;
+    private com.toedter.calendar.JDateChooser fechanacimientodoc;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblobligatorio;
+    private javax.swing.JLabel lblobligatorio1;
+    private javax.swing.JLabel lblobligatorio2;
+    private javax.swing.JLabel lblobligatorio3;
+    private javax.swing.JLabel lblobligatorio4;
+    private javax.swing.JLabel lblobligatorio5;
+    private javax.swing.JLabel lblobligatorio6;
+    private javax.swing.JTextField txtbuscardoctor;
+    private javax.swing.JTextArea txtdirecciondoc;
+    private javax.swing.JTextField txtdocumentodoc;
+    private javax.swing.JTextField txtedaddoc;
+    private javax.swing.JTextField txtnombredoc;
+    private javax.swing.JTextField txttelefonodoc;
     // End of variables declaration//GEN-END:variables
 }

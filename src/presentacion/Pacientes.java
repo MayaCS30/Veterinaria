@@ -169,6 +169,8 @@ public class Pacientes extends javax.swing.JInternalFrame {
         setTitle("Pacientes");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/wauwau.png"))); // NOI18N
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/wauwau.png"))); // NOI18N
         jLabel1.setText("Nombre del Paciente");
@@ -195,10 +197,12 @@ public class Pacientes extends javax.swing.JInternalFrame {
             }
         });
 
+        btnbuscarpa.setBackground(new java.awt.Color(153, 255, 255));
         btnbuscarpa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnbuscarpa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/lupa.png"))); // NOI18N
         btnbuscarpa.setText("Buscar Paciente");
 
+        btnregistrarpa.setBackground(new java.awt.Color(153, 255, 255));
         btnregistrarpa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnregistrarpa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/+.png"))); // NOI18N
         btnregistrarpa.setText(" Registar Paciente");
@@ -208,6 +212,7 @@ public class Pacientes extends javax.swing.JInternalFrame {
             }
         });
 
+        btneditarpa.setBackground(new java.awt.Color(153, 255, 255));
         btneditarpa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btneditarpa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/editar.png"))); // NOI18N
         btneditarpa.setText("Editar Paciente");
@@ -225,14 +230,17 @@ public class Pacientes extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnactivarpa.setBackground(new java.awt.Color(102, 255, 102));
         btnactivarpa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnactivarpa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/check.png"))); // NOI18N
         btnactivarpa.setText("Activar Cliente");
 
+        btndesactivarpa.setBackground(new java.awt.Color(255, 102, 102));
         btndesactivarpa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btndesactivarpa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/x.png"))); // NOI18N
         btndesactivarpa.setText("Desactivar Cliente");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("TOTAL DE REGISTROS");
 
         lblobligatoriobuscarpa.setBackground(new java.awt.Color(255, 255, 255));
@@ -289,10 +297,12 @@ public class Pacientes extends javax.swing.JInternalFrame {
                     .addComponent(btnactivarpa)
                     .addComponent(btndesactivarpa)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Listado de Pacientes", jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/polar.png"))); // NOI18N
 
@@ -454,10 +464,12 @@ public class Pacientes extends javax.swing.JInternalFrame {
             }
         });
 
+        btnguardarpaci.setBackground(new java.awt.Color(255, 255, 153));
         btnguardarpaci.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnguardarpaci.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/guardar.png"))); // NOI18N
         btnguardarpaci.setText(" Guardar");
 
+        btncancelarpaci.setBackground(new java.awt.Color(153, 153, 255));
         btncancelarpaci.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncancelarpaci.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/cancel_1.png"))); // NOI18N
         btncancelarpaci.setText(" Cancelar");
@@ -585,15 +597,15 @@ public class Pacientes extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel3))
                                 .addGap(63, 63, 63)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnguardarpaci)
-                                    .addComponent(btncancelarpaci))))
+                                    .addComponent(btnguardarpaci, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btncancelarpaci, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(4, 4, 4)
                         .addComponent(txtpesopa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblobligatorio11, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblobligatorio8, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Formulario de Pacientes", jPanel2);
@@ -604,7 +616,7 @@ public class Pacientes extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1033, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

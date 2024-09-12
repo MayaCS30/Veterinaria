@@ -140,7 +140,7 @@ public class Clientes extends javax.swing.JInternalFrame {
         setTitle("Clientes");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/clientes.png"))); // NOI18N
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/nombrecliente.png"))); // NOI18N
@@ -191,10 +191,12 @@ public class Clientes extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnactivarcli.setBackground(new java.awt.Color(102, 255, 102));
         btnactivarcli.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnactivarcli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/check.png"))); // NOI18N
         btnactivarcli.setText("Activar Cliente");
 
+        btndesactivarcli.setBackground(new java.awt.Color(255, 102, 102));
         btndesactivarcli.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btndesactivarcli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/x.png"))); // NOI18N
         btndesactivarcli.setText("Desactivar Cliente");
@@ -266,7 +268,7 @@ public class Clientes extends javax.swing.JInternalFrame {
 
         jTabbedPane1.addTab("Listado de Clientes", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/registrarpersona.png"))); // NOI18N
@@ -488,8 +490,8 @@ public class Clientes extends javax.swing.JInternalFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblobligatorio3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
